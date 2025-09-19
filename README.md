@@ -27,10 +27,7 @@ The diagram below shows how the components interact:
 
 ```mermaid
 flowchart LR
-    A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+     A[Gazebo Simulation] -->|Sensor data (Laser, Odometry)| B[SLAM Node]
 ```
 
 ---
