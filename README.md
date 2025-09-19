@@ -12,7 +12,7 @@ This package provides a simulated mobile robot that performs **Simultaneous Loca
 - Keyboard teleoperation support.
 
 ---
-Prerequisites
+## Prerequisites
 
 - ROS 2 Humble (or compatible distribution).
 - Gazebo (Fortress or the version paired with your ROS 2 release).
@@ -27,9 +27,9 @@ The diagram below shows how the components interact:
 
 ```mermaid
 flowchart LR
-    A[Gazebo Simulation] -->|Sensor data (Laser, Odometry)| B[SLAM Node]
-    B -->|Map + Localization| C[RViz3 Visualization]
-    C -->|User sets goals| D[Nav2 Navigation Stack]
-    D -->|Velocity Commands| A
-    E[Teleop Keyboard] -->|Manual Control| A
+    A[Gazebo Simulation] -->|Sensor data (Laser, Odometry)| B[SLAM Node] ;
+    B -->|Map + Localization| C[RViz3 Visualization];
+    C -->|User sets goals| D[Nav2 Navigation Stack] ;
+    D -->|Velocity Commands| A ;
+    E[Teleop Keyboard] -->|Manual Control| A;
 ```
