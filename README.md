@@ -34,8 +34,11 @@ flowchart LR
 
 ## Getting Started
 1. Clone the repository
-2. Build the workspace
-3. Source the workspace
+```
+git clone <your_repository_url> ~/your_ws/src
+```
+3. Build the workspace
+4. Source the workspace
 
 ---
 
