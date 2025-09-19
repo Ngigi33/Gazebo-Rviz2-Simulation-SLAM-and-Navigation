@@ -29,7 +29,9 @@ The diagram below shows how the components interact:
 flowchart LR
      A[Gazebo Simulation] --Sensor-data(Laser, Odometry)-->B[SLAM Node];
      B --Map + Localization-->C[RViz3 Visualization];
-     C -->|User sets goals| D[Nav2 Navigation Stack]
+     C -->|User sets goals| D[Nav2 Navigation Stack];
+     D -->|Velocity Commands| A
+     E[Teleop Keyboard] -->|Manual Control| A
 ```
 
 ---
