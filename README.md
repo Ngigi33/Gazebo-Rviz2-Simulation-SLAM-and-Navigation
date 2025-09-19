@@ -38,19 +38,43 @@ flowchart LR
 git clone <your_repository_url> ~/your_ws/src
 ```
 3. Build the workspace
-4. Source the workspace
+```
+cd ~/your_ws
+colcon build
+```
+5. Source the workspace
+```
+source install/setup.bash
+```
 
 ---
 
 ## Running the Simulation with SLAM
 4. Launch the simulated robot with SLAM enabled
+```
+ros2 launch sambot_bringup simulated_robot.launch.py use_slam:=true world_name:=willowgarage
+```
+This will:
+- Start Gazebo with the specified world (willowgarage in this example).
+- Bring up the robot model with sensors configured for SLAM.
+- Launch RViz3 with pre-configured topics.
+
 5. Control the robot with the keyboard
+In a new terminal
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+Use the displayed keys to drive the robot around and build the map.
 
 ---
 
 ## Running Navigation (after mapping)
 6. Launch the navigation stack
-
-
+```
+Use the displayed keys to drive the robot around and build the map.
+```
+This will:
+- Start the Nav2 stack with the saved map.
+- Allow you to send navigation goals via RViz3.
 
 
