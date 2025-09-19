@@ -27,9 +27,30 @@ The diagram below shows how the components interact:
 
 ```mermaid
 flowchart LR
-    A[Gazebo Simulation] -->|Sensor data (Laser, Odometry)| B[SLAM Node] ;
-    B -->|Map + Localization| C[RViz3 Visualization];
-    C -->|User sets goals| D[Nav2 Navigation Stack] ;
-    D -->|Velocity Commands| A ;
-    E[Teleop Keyboard] -->|Manual Control| A;
+    A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
 ```
+
+---
+
+## Getting Started
+1. Clone the repository
+2. Build the workspace
+3. Source the workspace
+
+---
+
+## Running the Simulation with SLAM
+4. Launch the simulated robot with SLAM enabled
+5. Control the robot with the keyboard
+
+---
+
+## Running Navigation (after mapping)
+6. Launch the navigation stack
+
+
+
+
