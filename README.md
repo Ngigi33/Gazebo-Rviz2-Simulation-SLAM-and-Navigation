@@ -6,12 +6,19 @@ This package provides a simulated mobile robot that performs **Simultaneous Loca
 
 ## Features
 - Full robot simulation in Gazebo.
-- Live visualization in RViz3.
+- Live visualization in RViz2.
 - SLAM capability to generate maps of the environment.
 - Nav2 navigation stack for autonomous movement once a map is built.
 - Keyboard teleoperation support.
 
+---
+Prerequisites
 
+- ROS 2 Humble (or compatible distribution).
+- Gazebo (Fortress or the version paired with your ROS 2 release).
+- RViz2.
+- Nav2 packages installed (nav2_bringup).
+- teleop_twist_keyboard package for keyboard teleoperation.
 ---
 
 ## System Overview
@@ -25,3 +32,4 @@ flowchart LR
     C -->|User sets goals| D[Nav2 Navigation Stack]
     D -->|Velocity Commands| A
     E[Teleop Keyboard] -->|Manual Control| A
+```
